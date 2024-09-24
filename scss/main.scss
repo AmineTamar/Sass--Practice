@@ -1,0 +1,83 @@
+$Primary-color : orange;
+$Secondary-color:black;
+$Tertiary-color :gray;
+
+$font-lg:40px;
+$font-md:30px;
+$font-sm:20px;
+body {
+    background-color: $Secondary-color;
+    color: $Tertiary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 30px;
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;  
+     }
+
+    background-color: $Primary-color;
+  li {
+    list-style: none;
+
+    a {
+       text-decoration: none;
+       font-size: $font-md;
+       color: $Secondary-color;
+    }
+    &:hover {
+        background-color: white;
+    padding: 5px;
+    }
+  }
+
+
+}
+
+@mixin headingSectionStyles {
+    font-size: $font-lg;
+    text-align: center;
+    color :$Tertiary-color;
+  
+}
+@mixin SectionStyles {
+    font-size: $font-sm;
+    color :$Secondary-color;
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    width: 80%;
+
+  
+}
+
+.banner {
+    @include SectionStyles;
+}
+.footer{
+    @include SectionStyles;
+}
+.banner h1 {
+    
+    @include headingSectionStyles;
+    
+}
+.footer h3 {
+    @include headingSectionStyles;
+    
+}
+.main {
+    @include SectionStyles;
+    h2 {
+        @include headingSectionStyles;
+    }
+
+}
