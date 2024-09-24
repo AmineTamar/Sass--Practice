@@ -21,9 +21,11 @@ body {
     .nav li a {
       text-decoration: none;
       font-size: 30px;
-      color: black; }
-    .nav li:hover {
+      color: black;
+      transition: color 0.5s, background-color 1s; }
+    .nav li a:hover {
       background-color: white;
+      color: orange;
       padding: 5px; }
 
 .banner {
@@ -45,12 +47,20 @@ body {
 .banner h1 {
   font-size: 40px;
   text-align: center;
-  color: gray; }
+  color: gray;
+  transition: color 0.5s, background-color 1s; }
+  .banner h1:hover {
+    background-color: orange;
+    color: black; }
 
 .footer h3 {
   font-size: 40px;
   text-align: center;
-  color: gray; }
+  color: gray;
+  transition: color 0.5s, background-color 1s; }
+  .footer h3:hover {
+    background-color: orange;
+    color: black; }
 
 .main {
   font-size: 20px;
@@ -62,4 +72,8 @@ body {
   .main h2 {
     font-size: 40px;
     text-align: center;
-    color: gray; }
+    color: gray;
+    transition: color 0.5s, background-color 1s; }
+  .main h2:hover {
+    background-color: orange;
+    color: black; }

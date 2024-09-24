@@ -1,46 +1,6 @@
-$Primary-color : orange;
-$Secondary-color:black;
-$Tertiary-color :gray;
-
-$font-lg:40px;
-$font-md:30px;
-$font-sm:20px;
-body {
-    background-color: $Secondary-color;
-    color: $Tertiary-color;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.nav {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 30px;
-    ul {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 20px;  
-     }
-
-    background-color: $Primary-color;
-  li {
-    list-style: none;
-
-    a {
-       text-decoration: none;
-       font-size: $font-md;
-       color: $Secondary-color;
-    }
-    &:hover {
-        background-color: white;
-    padding: 5px;
-    }
-  }
 
 
-}
+
 
 @mixin headingSectionStyles {
     font-size: $font-lg;
@@ -59,6 +19,66 @@ body {
   
 }
 
+@mixin hoverAnimation($transitionPara...) {
+transition: $transitionPara;
+}
+
+
+
+
+
+
+$Primary-color : orange;
+$Secondary-color:black;
+$Tertiary-color :gray;
+
+$font-lg:40px;
+$font-md:30px;
+$font-sm:20px;
+body {
+    background-color: $Secondary-color;
+    color: $Tertiary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav {
+    
+
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 30px;
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;  
+     }
+
+    background-color: $Primary-color;
+  li {
+    list-style: none;
+
+    a {
+       text-decoration: none;
+       font-size: $font-md;
+       color: $Secondary-color;
+       @include hoverAnimation(color 0.5s, background-color 1s); 
+    }
+    a:hover {
+        background-color: white;
+        color: $Primary-color;
+    padding: 5px;
+ 
+    }
+  }
+
+
+}
+
+
+
 .banner {
     @include SectionStyles;
 }
@@ -68,16 +88,41 @@ body {
 .banner h1 {
     
     @include headingSectionStyles;
+    @include hoverAnimation(color 0.5s, background-color 1s); 
+    &:hover{
+        background-color: $Primary-color;
+    color: $Secondary-color;
+      
     
+     }
+       
 }
+
+
 .footer h3 {
     @include headingSectionStyles;
+    @include hoverAnimation(color 0.5s, background-color 1s); 
+  &:hover{
+    background-color: $Primary-color;
+color: $Secondary-color;
+  
+
+ }
     
+
+
 }
 .main {
     @include SectionStyles;
     h2 {
         @include headingSectionStyles;
+        @include hoverAnimation(color 0.5s, background-color 1s); 
     }
+    h2:hover{
+        background-color: $Primary-color;
+    color: $Secondary-color;
+      
+}
+       
 
 }
