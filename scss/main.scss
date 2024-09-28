@@ -8,16 +8,16 @@
     color :$Tertiary-color;
   
 }
-@mixin SectionStyles {
+/*@mixin SectionStyles {
     font-size: $font-sm;
     color :$Secondary-color;
-    background-color: white;
+    background-color: rgb(248, 155, 155);
     padding: 5px;
     margin: 5px;
     width: 80%;
 
   
-}
+} */
 
 @mixin hoverAnimation($transitionPara...) {
 transition: $transitionPara;
@@ -77,13 +77,25 @@ body {
 
 }
 
+.sectionStyles {
+
+    font-size: $font-sm;
+    color :$Secondary-color;
+    background-color: rgb(230, 219, 219);
+    padding: 5px;
+    margin: 5px;
+    width: 80%;
+}
+
 
 
 .banner {
-    @include SectionStyles;
+    /*@include SectionStyles; */
+    @extend .sectionStyles;
 }
 .footer{
-    @include SectionStyles;
+   /* @include SectionStyles; */
+   @extend .sectionStyles;
 }
 .banner h1 {
     
@@ -113,7 +125,8 @@ color: $Secondary-color;
 
 }
 .main {
-    @include SectionStyles;
+    @extend .sectionStyles;
+   /* @include SectionStyles; */
     h2 {
         @include headingSectionStyles;
         @include hoverAnimation(color 0.5s, background-color 1s); 
@@ -121,8 +134,11 @@ color: $Secondary-color;
     h2:hover{
         background-color: $Primary-color;
     color: $Secondary-color;
+
+    
       
 }
        
 
 }
+
