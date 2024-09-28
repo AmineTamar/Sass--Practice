@@ -77,11 +77,11 @@ body {
 
 }
 
-.sectionStyles {
+%sectionStyles {
 
     font-size: $font-sm;
     color :$Secondary-color;
-    background-color: rgb(230, 219, 219);
+    background-color: rgb(175, 97, 97);
     padding: 5px;
     margin: 5px;
     width: 80%;
@@ -91,11 +91,11 @@ body {
 
 .banner {
     /*@include SectionStyles; */
-    @extend .sectionStyles;
+    @extend %sectionStyles;
 }
 .footer{
    /* @include SectionStyles; */
-   @extend .sectionStyles;
+   @extend %sectionStyles;
 }
 .banner h1 {
     
@@ -125,7 +125,7 @@ color: $Secondary-color;
 
 }
 .main {
-    @extend .sectionStyles;
+    @extend %sectionStyles;
    /* @include SectionStyles; */
     h2 {
         @include headingSectionStyles;
@@ -133,12 +133,12 @@ color: $Secondary-color;
     }
     h2:hover{
         background-color: $Primary-color;
-    color: $Secondary-color;
-
-    
-      
+    color: $Secondary-color;   
 }
-       
+     
 
 }
+
+
+
 
